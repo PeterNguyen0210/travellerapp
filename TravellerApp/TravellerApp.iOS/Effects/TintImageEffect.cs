@@ -2,10 +2,9 @@
 using TravellerApp.Effects;
 using UIKit;
 using Xamarin.Forms;
-using FormsTintImageEffect = TravellerApp.Effects.TintImageEffect;
 
-[assembly: ResolutionGroupName("TravellerApp")]
 [assembly: ExportEffect(typeof(TintImageEffect), "TintImageEffect")]
+
 namespace TravellerApp.iOS.Effects
 {
     public class TintImageEffect : PlatformEffect
@@ -28,6 +27,8 @@ namespace TravellerApp.iOS.Effects
             }
         }
 
-        protected override void OnDetached() { }
+        protected override void OnDetached()
+        {
+        }
     }
 }

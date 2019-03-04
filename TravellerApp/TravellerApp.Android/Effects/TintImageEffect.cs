@@ -1,5 +1,4 @@
 ﻿using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Widget;
 using System;
 using System.Linq;
@@ -8,17 +7,17 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using FormsTintImageEffect = TravellerApp.Effects.TintImageEffect;
 
-
 [assembly: ExportEffect(typeof(TintImageEffect), "TintImageEffect")]
+
 namespace TravellerApp.Droid.Effects
 {
- public class TintImageEffect : PlatformEffect
+    public class TintImageEffect : PlatformEffect
     {
         protected override void OnAttached()
         {
             try
             {
-                var effect = (FormsTintImageEffect) Element.Effects.FirstOrDefault(e => e is FormsTintImageEffect);
+                var effect = (FormsTintImageEffect)Element.Effects.FirstOrDefault(e => e is FormsTintImageEffect);
 
                 if (effect == null || !(Control is ImageView image))
                     return;
@@ -33,6 +32,8 @@ namespace TravellerApp.Droid.Effects
             }
         }
 
-        protected override void OnDetached() { }
+        protected override void OnDetached()
+        {
+        }
     }
 }

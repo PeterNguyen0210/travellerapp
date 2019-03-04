@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-
+using TravellerApp.Effects;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using TravellerApp.Effects;
 
 [assembly: ExportEffect(typeof(ShadowEffect), "ShadowEffect")]
+
 namespace TravellerApp.Droid.Effects
 {
     public class ShadowEffect : PlatformEffect

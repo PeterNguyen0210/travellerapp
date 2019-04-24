@@ -1,6 +1,6 @@
 ﻿namespace TravellerApp.Constants
 {
-    internal class ServerAuth
+    public class ServerAuth
     {
         public const string DB = "kamooni";
     }

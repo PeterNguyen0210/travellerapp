@@ -1,9 +1,11 @@
 ﻿using System;
-using TravellerApp.Effects;
+using System.Linq;
 using UIKit;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using FormsTintImageEffect = TravellerApp.Effects.TintImageEffect;
 
-[assembly: ExportEffect(typeof(TintImageEffect), "TintImageEffect")]
+[assembly: ExportEffect(typeof(FormsTintImageEffect), "TintImageEffect")]
 
 namespace TravellerApp.iOS.Effects
 {

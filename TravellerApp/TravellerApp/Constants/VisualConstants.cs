@@ -2,7 +2,7 @@
 
 namespace TravellerApp
 {
-    internal class VisualConstants
+    public class VisualConstants
     {
         public static readonly Font StandardFont;
 

@@ -1,6 +1,6 @@
 ﻿namespace TravellerApp.Constants
 {
-    internal class  ApiUri
+    public class ApiUri
     {
         private const string BASE_URL_OFFICIAL = "https://kamooni.com/";
         public const string BASE_URL_TEST = "https://kamcomtest.az.kamooni.com/";
@@ -29,12 +29,11 @@
         public static string CHECK_STATUS = "kamooni-api/CheckStats";
         public const string REVIEW_PLACE = "kamooni-api/ReviewPlace";
 
-
         public const string LOAD_ACTIVITIES = "/surebook-api/GetAvailableActivities";
-
 
         // Home
         public const string CURRENTLY_AT = "kamooni-api/CurrentlyAt";
+
         public const string ADD_TO_BOOKING_REQUEST = "kamooni-api/AddToBookingRequest";
         public const string ADD_TO_BOOKING_MANUALLY = "kamooni-api/AddToBookingManually";
 
@@ -58,19 +57,20 @@
 
         //All Posts
         public const string FetchAllPosts = "kamooni-api/FetchAllPosts";
+
         public const string LikeReview = "kamooni-api/LikeReview";
         public const string CommentReview = "kamooni-api/CommentReview";
 
-
         // Peach payment.
         public const string CheckoutId = "kamooni-channel/peach-mobile-get-checkout-id";
+
         public const string NotifyPaymentComplete = "kamooni-channel/peach-mobile-notify-payment-complete";
 
         //Maps
         public const string FETCH_PLACES = "kamooni-api/FetchPlaces";
+
         public const string FETCH_PLACE_TYPES = "kamooni-api/FetchPlaceTypes";
         public const string CREATE_PLACE = "kamooni-api/CreatePlace";
         public const string OPEN_PLACE = "kamooni-api/OpenPLace";
-
     }
 }

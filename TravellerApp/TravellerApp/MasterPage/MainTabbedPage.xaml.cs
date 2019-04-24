@@ -1,5 +1,4 @@
 ﻿using Acr.UserDialogs;
-using BottomBar.XamarinForms;
 using Realms;
 using System;
 using TravellerApp.Constants;
@@ -7,20 +6,27 @@ using TravellerApp.Interfaces;
 using TravellerApp.Interfaces.ComectChatCallback;
 using TravellerApp.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace TravellerApp
 {
-    public partial class MainTabbedPage : BottomBarPage
+    public partial class MainTabbedPage : Xamarin.Forms.TabbedPage
     {
         public MainTabbedPage()
         {
             App.MainTabbedPage = this;
 
+            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+
+            On<Android>().SetIsSwipePagingEnabled(false);
+            BarBackgroundColor = Color.WhiteSmoke;
+
+            On<Android>().SetBarItemColor(Color.Gray);
+            On<Android>().SetBarSelectedItemColor(Color.Orange);
+
             BarBackgroundColor = Color.White;
-            TabNormalColor = Color.Gray;
-            TabActiveColor = Color.Orange;
             BarTextColor = Color.FromHex("#666666");
-            FixedMode = true;
 
             var page1 = new NavigationPage(new RecentPostsPage()
             {
@@ -28,7 +34,7 @@ namespace TravellerApp
                 {
                     File = "home1.png"
                 },
-                Title = "Home"
+                //Title = "Home"
             })
             {
                 BarTextColor = Color.White,
@@ -36,7 +42,7 @@ namespace TravellerApp
                 {
                     File = "home1.png"
                 },
-                Title = "Home"
+                //Title = "Home"
             };
 
             var page2 = new NavigationPage(new CurrentlyAtPage())
@@ -45,7 +51,7 @@ namespace TravellerApp
                 {
                     File = "wallet.png"
                 },
-                Title = "Wallet"
+                //Title = "Wallet"
             };
 
             var page3 = new NavigationPage(new ExplorePage())
@@ -54,7 +60,7 @@ namespace TravellerApp
                 {
                     File = "explore.png"
                 },
-                Title = "Explore"
+                //Title = "Explore"
             };
 
             var page4 = new NavigationPage(new MessagePage())
@@ -63,7 +69,7 @@ namespace TravellerApp
                 {
                     File = "folder.png"
                 },
-                Title = "Messages"
+                //Title = "Messages"
             };
 
             var page5 = new NavigationPage(new MyBookingsPage())
@@ -72,7 +78,7 @@ namespace TravellerApp
                 {
                     File = "profile.png"
                 },
-                Title = "Feed"
+                //Title = "Feed"
             };
 
             var page6 = new MyProfilePage()
@@ -81,11 +87,11 @@ namespace TravellerApp
                 {
                     File = "feed.png"
                 },
-                Title = "Profile"
+                //Title = "Profile"
             };
 
             Children.Add(page1);
-            Children.Add(page2);
+            //Children.Add(page2);
             Children.Add(page3);
             Children.Add(page4);
             Children.Add(page5);
@@ -122,7 +128,7 @@ namespace TravellerApp
 
         public void NavigateToPage(Type page)
         {
-            var tabbedPage = this as TabbedPage;
+            var tabbedPage = this as Xamarin.Forms.TabbedPage;
 
             if (page == typeof(RecentPostsPage))
             {

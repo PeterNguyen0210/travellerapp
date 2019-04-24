@@ -10,7 +10,6 @@ using PremindSDK.Android;
 using PremindSDK.Core;
 using System;
 using TravellerApp.Droid.DependencyService;
-using TravellerApp.Droid.PeachPayment.Activity;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps.Android;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
@@ -19,7 +18,7 @@ namespace TravellerApp.Droid
 {
     [Activity(Label = "Kamooni Traveller", Icon = "@mipmap/ic_launcher", Theme = "@style/MyTheme.Launch", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView }, Categories = new[] { Intent.ActionDefault, Intent.CategoryBrowsable }, DataScheme = "kamooni")]
-    public class MainActivity : BasePaymentActivity
+    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

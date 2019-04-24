@@ -45,10 +45,10 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
   <!-- Custom checkout theme -->
-  <style name="CustomCheckoutTheme" parent="Theme.Checkout.Light">
+  <!--<style name="CustomCheckoutTheme" parent="Theme.Checkout.Light">
     <item name="colorAccent">@color/colorAccent</item>
     <item name="headerBackground">@color/colorAccent</item>
-  </style>
+  </style>-->
   <style name="BottomBarText">
     <item name="android:textSize">10sp</item>
   </style>

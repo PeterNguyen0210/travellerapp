@@ -1,6 +1,6 @@
 ﻿namespace TravellerApp.Constants
 {
-    internal class States
+    public class States
     {
         public const string Confirm_Booking = "Confirm Booking";
         public const string Manage_Booking = "Manage Booking";
